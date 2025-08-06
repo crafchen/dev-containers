@@ -1,0 +1,49 @@
+version: "3.9"
+
+services:
+  go:
+    build: ../app/go
+    container_name: go-dev
+    volumes:
+      - go-dev-volume:/app
+    networks:
+      - dev-net
+
+  react:
+    build: ../app/react
+    container_name: react-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - react-dev-volume:/app
+    networks:
+      - dev-net
+
+  # db:
+  #   image: postgres:15
+  #   container_name: db-dev
+  #   environment:
+  #     POSTGRES_PASSWORD: example
+  #   ports:
+  #     - "5432:5432"
+  #   networks:
+  #     - dev-net
+
+
+  # redis:
+  #   image: redis:7
+  #   container_name: redis-dev
+  #   ports:
+  #     - "6379:6379"
+  #   networks:
+  #     - dev-net
+
+networks:
+    dev-net:
+        external: false
+
+volumes:
+    go-dev-volume:
+    rust-dev-volume:
+    react-dev-volume:
+    redis-dev-volume:

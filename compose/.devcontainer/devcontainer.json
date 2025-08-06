@@ -1,0 +1,12 @@
+{
+    "name": "Dev Containers Workspace",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "go", 
+    "workspaceFolder": "/workspace",
+    "runServices": ["go", "react", "db", "redis"],
+    "shutdownAction": "stopCompose",
+    "postCreateCommand": "bash /workspace/scripts/setup.sh",
+    "remoteUser": "vscode"
+}
