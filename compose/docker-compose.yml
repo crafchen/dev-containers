@@ -1,23 +1,26 @@
-version: "3.9"
 
 services:
-  go:
-    build: ../app/go
-    container_name: go-dev
-    volumes:
-      - go-dev-volume:/app
-    networks:
-      - dev-net
+  # go:
+  #   build: ../app/go
+  #   container_name: go-dev
+  #   volumes:
+  #     - go-dev-volume:/app
+  #   networks:
+  #     - dev-net
 
   react:
-    build: ../app/react
-    container_name: react-dev
-    ports:
-      - "3000:3000"
-    volumes:
-      - react-dev-volume:/app
-    networks:
-      - dev-net
+        build:
+            context: ../app/react/.devcontainer
+            dockerfile: Dockerfile
+        container_name: ${PROJECT_NAME}-dev-test-react
+        working_dir: /app
+        volumes:
+            - ../:/workspace
+            - react-dev-volume-test:/workspace/app/react/node_modules
+        ports:
+            - "5174:5174"
+        networks:
+            - dev-net
 
   # db:
   #   image: postgres:15
@@ -43,7 +46,4 @@ networks:
         external: false
 
 volumes:
-    go-dev-volume:
-    rust-dev-volume:
-    react-dev-volume:
-    redis-dev-volume:
+    react-dev-volume-test:
