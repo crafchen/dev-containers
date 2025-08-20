@@ -1,0 +1,26 @@
+{
+    "name": ".NET Dev Container",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "dotnet",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "postCreateCommand": "dotnet restore",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.formatOnSave": true,
+                "files.trimTrailingWhitespace": true,
+                "files.insertFinalNewline": true
+            },
+            "extensions": [
+                "ms-dotnettools.csharp",
+                "ms-azuretools.vscode-docker",
+                "eamodio.gitlens",
+                "rangav.vscode-thunder-client"
+            ]
+        }
+    }
+    // "mounts": [
+    //   "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    // ],
+}

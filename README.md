@@ -1,8 +1,8 @@
-# Dev Containers Project Usage Guide
+# Job Portal Dev - Development Environment Guide
 
 ## Introduction
 
-This project provides a development environment using Docker and Dev Containers, making it easy to set up and develop applications in a consistent environment.
+This project provides a ready-to-use development environment using Docker and Dev Containers, ensuring consistency and ease of setup for all developers.
 
 ## Requirements
 
@@ -10,32 +10,41 @@ This project provides a development environment using Docker and Dev Containers,
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
-## How to Use
+## Getting Started
 
 1. **Clone the repository:**
     ```bash
     git clone <repo-link>
-    cd dev-containers
+    cd job-portal-dev
     ```
 
 2. **Open with VS Code:**
-    - Select `Open Folder` and open the project directory.
+    - Open the `job-portal-dev` folder in VS Code.
     - Press `F1`, search for and select `Dev Containers: Reopen in Container`.
 
 3. **Work inside the container:**
     - VS Code will automatically build and open the development environment inside the container.
     - You can install additional extensions or configure as needed.
 
-## Folder Structure
+## Project Structure
 
 ```
-dev-containers/
+job-portal-dev/
 ├── .devcontainer/
 │   ├── devcontainer.json
 │   └── Dockerfile
-├── src/
+├── app/
+├── composes/
+├── script/
+├── Makefile
 └── README.md
 ```
+
+- **.devcontainer/**: Dev Containers configuration files.
+- **app/**: Application source code and related files.
+- **compose/**: Docker Compose configuration files.
+- **script/**: Utility and setup scripts.
+- **README.md**: Project documentation.
 
 ## Customization
 
@@ -44,4 +53,4 @@ dev-containers/
 
 ## Contribution
 
-Please create a pull request or issue if you want to contribute or report a bug.
+Feel free to open an issue or submit a pull request if you want to contribute or report

@@ -1,0 +1,36 @@
+
+services:
+
+    dotnet:
+        build:
+            context: ../app/dotnet/.devcontainer
+            dockerfile: Dockerfile
+        container_name: ${PROJECT_NAME}-dev-test-dotnet
+        working_dir: /app
+        volumes:
+            - ../:/workspace
+            - dotnet-dev-volume-test:/workspace/app/dotnet/bin
+        ports:
+            - "5000:5000"
+        networks:
+            - dev-net
+
+    react:
+        build:
+            context: ../app/react/.devcontainer
+            dockerfile: Dockerfile
+        container_name: ${PROJECT_NAME}-dev-test-react
+        working_dir: /app
+        volumes:
+            - ../:/workspace
+            - react-dev-volume-test:/workspace/app/react/node_modules
+        ports:
+            - "5174:5174"
+        networks:
+            - dev-net
+networks:
+    dev-net:
+        external: false
+
+volumes:
+    react-dev-volume-test:
