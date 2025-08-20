@@ -4,18 +4,22 @@
         "dockerfile": "Dockerfile",
         "context": ".."
     },
-    "settings": {
-        "editor.formatOnSave": true,
-        "files.trimTrailingWhitespace": true,
-        "files.insertFinalNewline": true
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.formatOnSave": true,
+                "files.trimTrailingWhitespace": true,
+                "files.insertFinalNewline": true
+            },
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "formulahendry.auto-rename-tag",
+                "bradlc.vscode-tailwindcss",
+                "dsznajder.es7-react-js-snippets"
+            ]
+        }
     },
-    "extensions": [
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "formulahendry.auto-rename-tag",
-        "bradlc.vscode-tailwindcss",
-        "dsznajder.es7-react-js-snippets"
-    ],
     "workspaceFolder": "/app",
     "forwardPorts": [5173],
     "postCreateCommand": "yarn install",
