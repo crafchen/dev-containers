@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EgcG8WF+w5s=",
+  "dgSpecHash": "hA7tDM638hY=",
   "success": true,
-  "projectFilePath": "/home/administrator/app/job-portal-dev/app/dotnet/api-core/api.csproj",
+  "projectFilePath": "/home/administrator/app/job-portal-dev/app/dotnet/api/api.csproj",
   "expectedPackageFiles": [
     "/home/administrator/.nuget/packages/automapper/9.0.0/automapper.9.0.0.nupkg.sha512",
     "/home/administrator/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

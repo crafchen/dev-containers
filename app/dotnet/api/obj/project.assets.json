@@ -4071,11 +4071,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/administrator/app/job-portal-dev/app/dotnet/api-core/api.csproj",
+      "projectUniqueName": "/home/administrator/app/job-portal-dev/app/dotnet/api/api.csproj",
       "projectName": "api",
-      "projectPath": "/home/administrator/app/job-portal-dev/app/dotnet/api-core/api.csproj",
+      "projectPath": "/home/administrator/app/job-portal-dev/app/dotnet/api/api.csproj",
       "packagesPath": "/home/administrator/.nuget/packages/",
-      "outputPath": "/home/administrator/app/job-portal-dev/app/dotnet/api-core/obj/",
+      "outputPath": "/home/administrator/app/job-portal-dev/app/dotnet/api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/administrator/.nuget/NuGet/NuGet.Config"
